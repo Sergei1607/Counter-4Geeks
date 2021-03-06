@@ -15,7 +15,28 @@ import { Home } from "./component/home.js";
 
 let counter = "0";
 
-setInterval(function() {
-	counter++;
+ReactDOM.render(<Home value={counter} />, document.querySelector("#app"));
+
+function render() {
 	ReactDOM.render(<Home value={counter} />, document.querySelector("#app"));
-}, 1000);
+	counter++;
+	if (counter == 10) {
+		alert("Boom");
+	}
+}
+
+let timer;
+
+export function Start() {
+	timer = setInterval(render, 1000);
+	return timer;
+}
+
+export function Stop() {
+	clearInterval(timer);
+}
+
+export function Reiniciar() {
+	counter = 0;
+	return counter;
+}

@@ -17,5 +17,5 @@ export function Box(props) {
 }
 
 Box.propTypes = {
-	value: PropTypes
+	value: PropTypes.string
 };

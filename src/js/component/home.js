@@ -2,8 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+
 import { Box } from "./box.js";
+import { Button } from "./button.js";
+import { Start } from "/src/js/index.js";
+import { Stop } from "/src/js/index.js";
+import { Reiniciar } from "/src/js/index.js";
 
 //create your first component
 export function Home(props) {
@@ -25,10 +29,15 @@ export function Home(props) {
 				<Box value={digit2 == "" ? "0" : digit2} />
 				<Box value={digit1} />
 			</div>
+			<div className="container text-white d-flex justify-content-center mt-5">
+				<Button text="Iniciar" function={Start} />
+				<Button text="Detener" function={Stop} />
+				<Button text="Reiniciar" function={Reiniciar} />
+			</div>
 		</div>
 	);
 }
 
 Home.propTypes = {
-	value: PropTypes.string
+	value: PropTypes.number
 };
