@@ -29,7 +29,7 @@ export function Home(props) {
 				<Box value={digit2 == "" ? "0" : digit2} />
 				<Box value={digit1} />
 			</div>
-			<div className="container text-white d-flex justify-content-center mt-5">
+			<div className="container text-white d-flex justify-content-center mt-4">
 				<Button text="Iniciar" function={Start} />
 				<Button text="Detener" function={Stop} />
 				<Button text="Reiniciar" function={Reiniciar} />
