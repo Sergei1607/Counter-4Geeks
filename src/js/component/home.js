@@ -18,6 +18,7 @@ export function Home(props) {
 	let digit4 = digit.charAt(digit.length - 4);
 	let digit5 = digit.charAt(digit.length - 5);
 	let digit6 = digit.charAt(digit.length - 6);
+
 	return (
 		<div>
 			<div className="container-flex bg-dark text-white d-flex justify-content-center">

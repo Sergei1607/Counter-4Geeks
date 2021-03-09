@@ -20,9 +20,6 @@ ReactDOM.render(<Home value={counter} />, document.querySelector("#app"));
 function render() {
 	ReactDOM.render(<Home value={counter} />, document.querySelector("#app"));
 	counter++;
-	if (counter == 10) {
-		alert("Boom");
-	}
 }
 
 let timer;
